@@ -1,0 +1,24 @@
+<div id="chatroom">
+    <div class="left">
+        <p>Users</p>
+        <hr>
+        <div class = "users" *ngFor="let chat of chatData; let i = index">
+                <div (click) = onClick(i)>{{chat.userName}} ({{chat.msg.length}})</div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="messages">
+            <p>{{currentUser}}</p>
+            <hr>
+            <p *ngFor="let msg of messages">
+                    {{msg}}
+            </p><br>
+        </div>
+        <div class="form" *ngIf="selectedIdx != null">
+                <input type="text" [formControl]="newMsg"><button (click) = onSubmit()>Submit</button>
+        </div>
+        <div *ngIf="selectedIdx != null">
+                <p *ngFor="let errMessage of getErrorMessages()">{{errMessage}}</p>
+            </div>
+    </div>
+  </div>

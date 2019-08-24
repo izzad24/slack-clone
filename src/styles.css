@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+#chatroom {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+ 
+.left {
+    width: 30%;
+    margin-right: 10px;
+    color: white;
+    background-color: #68002b;
+}
+
+/* .users{
+    color: black;
+    background-color: white;
+} */
+ 
+.right {
+    width: 65%;
+}
+ 
+.messages {
+    height: 80%;
+}
+ 
+.form {
+    border: 1px solid black;
+    height: 20%;
+}
